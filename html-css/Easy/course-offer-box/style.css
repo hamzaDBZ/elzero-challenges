@@ -109,4 +109,5 @@ sub {
 .essentials {
     flex-basis: 44%;
     z-index: -1;
+    border-radius: 0 8px 8px 0;
 }
