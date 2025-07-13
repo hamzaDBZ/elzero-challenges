@@ -1,0 +1,159 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    background-color: #eee;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 20px 30px;
+}
+
+.profile-info > div:first-child,
+.profile-info > div:last-child,
+.point-log,
+.trophies,
+.ladder-news,
+.your-power {
+    background-color: #fff;
+    padding: 20px;
+}
+
+.profile-info {
+    display: flex;
+    gap: 2px;
+}
+
+.profile-info > div:first-child {
+    min-width: 280px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.profile-info img {
+    border-radius: 50%;
+}
+
+.profile-info img + div {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.profile-info meter {
+    height: 45px;
+    width: 100%;
+    margin: -8px 0 -5px;
+}
+
+.profile-info meter + div {
+    font-weight: lighter;
+
+}
+
+.profile-info meter + div span {
+    color: #107c10;
+    font-weight: bold;
+}
+
+.profile-info > div:last-child {
+    position: relative;
+}
+
+.profile-info .name {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 18px;
+}
+
+.profile-info .name + div , .profile-info .name + div + div {
+    line-height: 2;
+    color: #607d8b;
+    font-size: 18px;
+    text-wrap: wrap;
+}
+
+.profile-info .name + div + div {
+    line-height: revert;
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+}
+
+
+
+
+.point-log > div:first-child,
+.trophies > div:first-child,
+.ladder-news > div:first-child,
+.your-power div:first-child {
+    background-color: #607d8b;
+    color: #fff;
+    padding: 16px;
+    font-size: 22px;
+    font-weight: bold;
+    width: max-content;
+}
+
+.point-log > div:not(:first-of-type),
+.ladder-news > div:last-child
+ {
+    margin-top: 25px;
+    color: #607d8b;
+}
+
+.point-log > div span:first-of-type {
+    color: #107c10;
+    font-weight: bold;
+}
+
+.point-log > div span:last-of-type {
+    color: #e91e63;
+    font-weight: bold;
+}
+
+
+.trophies > div:last-child {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    justify-content: space-between;
+}
+
+
+.ladder-news > div span:first-of-type,
+.ladder-news > div span:last-of-type {
+    font-weight: bold;
+}
+
+.ladder-news > div span:first-of-type {
+    color: #e91e63;
+}
+
+.ladder-news > div span:last-of-type {
+    color: #2196f3;
+}
+
+
+
+.your-power > div:not(:first-child) {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    color: #607d8b;
+}
+
+.your-power > div span {
+    color: #008063;
+    font-weight: bold;
+}
+
+.your-power > div:nth-child(4) span, 
+.your-power > div:nth-child(6) span {
+    color: #ff0000;
+}

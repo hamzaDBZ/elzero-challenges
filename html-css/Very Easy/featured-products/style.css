@@ -1,0 +1,102 @@
+body {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+}
+
+.header {
+    background-color: #306776;
+    color: #fff;
+    width: 200px;
+    height: 40px;
+    align-content: center;
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 35px;
+    position: relative;
+    right: 30px;
+}
+
+.header + div {
+    display: flex;
+    gap: 30px;
+    text-align: center;
+
+}
+
+.header + div > div {
+    color: #888;
+    box-shadow: 0px 0px 0px 5px #ddd;
+}
+
+.header + div img {
+    width: 250px;
+}
+
+.header + div > div {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.header + div div:last-child {
+    color: #306776;
+    margin-bottom: 5px;
+}
+
+.header + div div:last-child span:first-child {
+    text-decoration: line-through;
+    color: #888;
+}
+
+.header + div div:last-child span:last-child {
+    color: #ef4802;
+}
+
+.header + div > div div:last-child {
+    position: relative;
+}
+
+.header + div > div div:last-child::before,
+.header + div > div div:last-child::after {
+    content: "";
+    display: inline-block;
+    width: 75px;
+    height: 2px;
+    background-color: #888;
+    position: absolute;
+    top: 8px;
+}
+
+.header + div > div div:last-child::before {
+    left: 15px;
+}
+
+.header + div > div div:last-child::after {
+    right: 15px;
+}
+
+.header + div > div:nth-child(2) div:last-child::before,
+.header + div > div:nth-child(2) div:last-child::after {
+    width: 50px;
+}
+
+.header + div > div:nth-child(2) {
+    position: relative;
+}
+
+.header + div > div:nth-child(2)::before {
+    content: "Sale!";
+    display: inline-block;
+    background-color: #ef4802;
+    font-size: 14px;
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    align-content: center;
+    border-radius: 50px;
+    position: absolute;
+    top: -20px;
+    left: -10px;
+}

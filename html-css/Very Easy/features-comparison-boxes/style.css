@@ -1,0 +1,137 @@
+body {
+    background-color: #ddd;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container::before , .container::after {
+    display: inline-block;
+    background-color: #2196f3;
+    position: absolute;
+    top: -55px;
+
+}
+
+.container::before {
+    content: "Save 50%";
+    color: #fff;
+    padding: 11px;
+    right: 40px;
+
+}
+
+.container::after {
+    content: "";
+    right: 10px;
+    border-width: 20px 30px 20px 0;
+    border-style: solid;
+    border-color: transparent #ddd transparent;
+}
+
+.container {
+    width: 80%;
+    margin: 150px auto 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    position: relative;
+}
+
+.box {
+    background-color: #fff;
+    width: 80%;
+}
+
+.header {
+    border-radius: 5px 5px 0 0;
+    color: #fff;
+    padding: 15px;
+    font-size: 18px;
+}
+
+.basic .header {
+    background-color: #f44336;
+}
+
+.pro .header {
+    background-color: #2196f3;
+}
+
+.body div {
+    padding: 16px;
+    border-bottom: 1px solid #00000041;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+}
+
+.body div span:first-child {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+
+.body div span:nth-child(3) {
+    display: inline-block;
+    background-color: #7e7e7e;
+    color: #fff;
+    text-align: center;
+    align-content: center;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    position: absolute;
+    right: 20px;
+}
+
+.body div span.red, .body div span.green {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.body div span.red {
+    background-color: #e91e63;
+}
+
+.red::before, .red::after {
+    content: "";
+    display: block;
+    background-color: #fff;
+    width: 10px;
+    height: 2px;
+}
+
+.red::before {
+    transform: translate(5px) rotate(60deg);
+}
+
+.red::after {
+    transform: translate(-5px) rotate(120deg);
+}
+
+.body div span.green {
+    background-color: #009688;
+}
+
+.green::before, .green::after {
+    content: "";
+    display: block;
+    background-color: #fff;
+}
+
+.green::before {
+    width: 5px;
+    height: 2px;
+    transform: translate(4px, 3px) rotate(60deg);
+
+}
+
+.green::after {
+    width: 12px;
+    height: 2px;
+    transform:  rotate(120deg);
+
+}

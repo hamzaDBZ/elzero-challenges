@@ -1,0 +1,112 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #51509b;
+    margin: 0;
+}
+
+.container {
+    width: 800px;
+    margin: 0 auto;
+}
+
+.head {
+    color: #fff;
+}
+
+.head + div {
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+}
+
+.package {
+    background-color: #fff;
+    color: #4a5568;
+    width: 400px;
+    padding: 40px;
+    border-radius: 8px;
+    font-size: 12px;
+    line-height: 1.5;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    box-shadow: 1px 0px 20px 1px #4a556865;
+}
+
+.pkg-head {
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.star,
+.check {
+    color: #e5af40;
+    font-size: 25px;
+}
+
+.package > div {
+    position: relative;
+}
+
+.package > div:not(.pkg-head, div:last-child, div:nth-last-child(2))::after {
+    content: "";
+    display: block;
+    background-color: #4a556833;
+    width: 100%;
+    height: 1px;
+    position: absolute;
+    bottom: -10px;
+}
+
+.package span,
+.package div:nth-child(2) {
+    font-weight: bold;
+}
+
+.premium div:nth-last-child(2),
+.essentials div:last-child {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 150px;
+}
+
+.premium div:nth-last-child(2) div,
+.essentials div:last-child div {
+    font-size: 30px;
+    font-weight: bold;
+    position: relative;
+}
+
+sup, sub {
+    font-size: 12px;
+    position: absolute;
+}
+
+sup {
+    top: 0;
+    left: -7px;
+}
+
+sub {
+    bottom: 0;
+    right: -27px;
+}
+
+.premium div:nth-last-child(2) span,
+.essentials div:last-child span {
+    background-color: #e5af40;
+    color: #fff;
+    padding: 12px;
+    font-size: 14px;
+    border-radius: 3px;
+}
+
+.essentials {
+    flex-basis: 44%;
+    z-index: -1;
+}

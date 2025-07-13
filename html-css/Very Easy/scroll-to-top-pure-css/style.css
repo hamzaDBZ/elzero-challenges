@@ -1,0 +1,23 @@
+html {
+    scroll-behavior: smooth;
+
+}
+
+div:not(div.btn) {
+    height: 500px;
+}
+
+.btn {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: larger;
+    background-color: #f00;
+    color: #fff;
+    text-align: center;
+    align-content: center;
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    cursor: pointer;
+}
