@@ -1,0 +1,240 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("./image/bg-image.jpg");
+    background-size: cover;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 0;
+}
+
+.container {
+    background-color: #fff;
+    width: 80%;
+    display: flex;
+}
+
+.side {
+    flex-basis: 40%;
+    border-right: 1px solid #aaa;
+}
+
+.side-head {
+    padding: 50px 50px;
+    display: flex;
+    gap: 10px;
+    position: relative;
+}
+
+.side-head input,
+.send-bar input {
+    background-color: #eceff1;
+    height: 50px;
+    font-size: 20px;
+    border: none;
+    border-radius: 50px;
+    padding-left: 12px;
+}
+
+.side-head div {
+    background-color: #00b0ff;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: relative;
+    cursor: pointer;
+}
+
+.side-head div::before,
+.side-head div::after {
+    content: "";
+    position: absolute;
+}
+
+.side-head div::before {
+    border: 1px solid #fff;
+    width: 14px;
+    height: 14px;
+    top: calc(50% - 7px);
+    right: calc(50% - 7px);
+}
+
+.side-head div::after {
+    width: 16px;
+    height: 2px;
+    background-color: #fff;
+    right: calc(50% - 12px);
+    top: calc(50% - 7px);
+    transform: rotate(120deg);
+    box-shadow: 0px 0px 0px 3px #00b0ff;
+}
+
+.contact > div {
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.contact > div:not(:nth-last-child(2), :last-child):after,
+.side-head::after {
+    content: "";
+    display: block;
+    height: 1px;
+    width: 80%;
+    background-color: #aaa;
+    position: absolute;
+    bottom: 0;
+}
+
+.contact > div > div:first-child {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.contact > div > div:first-child img {
+    border-radius: 50%;
+}
+
+.contact > div > div:first-child > div > div,
+.contact > div > div:last-child {
+    font-weight: bold;
+}
+
+.contact > div > div:first-child > div > div:last-child {
+    margin-top: 4px;
+    color: #999;
+}
+
+.contact > div > div:last-child {
+    color: #999;
+}
+
+.contact > div:last-child {
+    background-color: #00b0ff;
+}
+
+.contact > div:last-child > div:first-child > div > div:last-child,
+.contact > div:last-child > div:last-child {
+    color: #ddd;
+}
+
+.active-contact {
+    flex-basis: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.active-contact .contact-name {
+    background-color: #ebeef0;
+    padding: 24px 50px;
+    width: 100%;
+    font-weight: bold;
+}
+
+.active-contact .contact-name span:first-child {
+    color: #999;
+}
+
+.message-zone {
+    padding: 0 50px;
+}
+
+.active-contact .date {
+    text-align: center;
+    color: #999;
+    position: relative;
+}
+
+.active-contact .date::before,
+.active-contact .date::after {
+    content: "";
+    display: block;
+    background-color: #ddd;
+    width: 35%;
+    height: 2px;
+    position: absolute;
+    top: 8px;
+}
+
+.active-contact .date::after {
+    right: 0;
+}
+
+.convo {
+    padding: 36px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.convo div {
+    padding: 10px;
+    width: max-content;
+    border-radius: 5px;
+    position: relative;
+}
+
+.convo div::before {
+    content: "";
+    display: block;
+    position: absolute;
+	border-top: 4px solid transparent;
+	border-bottom: 4px solid transparent;
+    top: 16px;
+}
+
+.me {
+    background-color: #00b0ff;
+    color: #fff;
+}
+
+.me::before {
+	border-right: 8px solid #00b0ff;
+    left: -8px;
+}
+
+.them {
+    background-color: #eceff1;
+    align-self: flex-end;
+}
+
+.them::before {
+	border-left: 8px solid #eceff1;
+    right: -8px;
+}
+
+.send-bar {
+    padding: 36px 0;
+    display: flex;
+    align-items: center;
+}
+
+.send-bar input {
+    border-radius: 5px;
+    width: 80%;
+}
+
+.send-bar span {
+    background-color: #eceff1;
+    color: #999;
+    height: 50px;
+    align-content: center;
+    cursor: pointer;
+}
+
+.send-bar span:last-child {
+    font-size: 30px;
+}
+
+.send-bar span:last-child svg {
+    width: 20px;
+    margin-right: 10px;
+}
