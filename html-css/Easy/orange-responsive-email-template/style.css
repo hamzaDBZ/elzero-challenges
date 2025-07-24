@@ -1,0 +1,179 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 30px 0;
+}
+
+section {
+    margin: 0 auto;
+    width: 80%;
+    position: relative;
+}
+
+.bg {
+    background-image: url("./image/kids-playing.jpg");
+    background-size: cover;
+    height: 400px;
+}
+.bg::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(90deg, #ed4c21 0%, #ed4d21d0 100%);
+}
+
+.bg + div {
+    padding: 50px;
+    display: flex;
+    gap: 40px;
+    position: absolute;
+    top: 0;
+}
+
+.main {
+    background-color: #122333;
+    color: #fff;
+    padding: 40px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.main .header {
+    font-size: 60px;
+    line-height: 1.2;
+    position: relative;
+}
+
+.main .header + div,
+.article .title + div {
+    width: 70px;
+    height: 5px;
+    background-color: #ed4c21;
+}
+
+.main .header + div + div {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.main .header + div + div span {
+    margin-right: 15px;
+    color: #72a33c;
+}
+
+.main button,
+.article button {
+    padding: 15px;
+    font-size: 22px;
+    align-self: flex-start;
+    background-color: #ed4c21;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.main + div {
+    border: 3px solid #ed4c21;
+    width: 50%;
+    padding: 30px;
+    font-size: 22px;
+    line-height: 1.8;
+    align-self: flex-end;
+    margin-bottom: 50px;
+}
+
+.features {
+    margin-top: 360px;
+    display: flex;
+    gap: 50px;
+}
+
+.features > div {
+    background-color: #f2f8fa;
+    padding: 50px 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.features > div div:first-child,
+.features > div div:nth-child(2) {
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.features > div div:nth-child(2) {
+    letter-spacing: 2px;
+}
+
+.features > div div:first-child,
+.features > div div:last-child {
+    color: #ed4c21;
+}
+
+.features > div div:nth-child(3) {
+    line-height: 1.8;
+    font-size: 24px;
+}
+
+.features > div div:last-child {
+    font-size: 20px;
+}
+
+.article {
+    margin-top: 50px;
+    background-image: url("./image/traffic.webp");
+    background-size: cover;
+    position: relative;
+    z-index: -1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 50px;
+}
+
+.article::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: #122333cf;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.article > div:first-child {
+    flex-basis: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    color: #fff;
+}
+
+.title {
+    font-size: 35px;
+}
+
+.article .title + div + div {
+    line-height: 1.8;
+    font-weight: bold;
+}
+
+.image {
+    background-image: url("./image/company.jpg");
+    background-size: cover;
+    width: 400px;
+    height: 400px;
+}
