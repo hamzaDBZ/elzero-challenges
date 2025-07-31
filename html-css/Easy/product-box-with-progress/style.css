@@ -1,0 +1,134 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 25px 0;
+    background-color: #eee;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    background-color: #fff;
+    width: 40%;
+    border-radius: 8px;
+}
+
+.container img {
+    width: 100%;
+    border-radius: 8px 8px 0 0;
+}
+
+.container > div:first-child {
+    position: relative;
+}
+
+.container > div:first-child::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 80px;
+    background-image: url("./image/fields.jpg");
+    background-size: cover;
+    background-position: 50%;
+    position: absolute;
+    bottom: -30px;
+    right: 30px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+}
+
+.container > div:last-child {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.head {
+    color: #444;
+    font-size: 35px;
+}
+
+.head + div {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #777;
+    font-size: 20px;
+}
+
+.head + div span {
+    color: #009688;
+}
+
+svg {
+    width: 16px;
+    fill: #999;
+}
+
+.container > div:last-child > div:nth-child(3) {
+    color: #777;
+    line-height: 1.8;
+    font-size: 18px;
+} 
+
+.container > div:last-child > div:nth-child(4) i {
+    color: #009688;
+}
+
+.container > div:last-child > div:nth-child(4) span {
+    color: #777;
+} 
+
+progress {
+    margin-top: 15px;
+    width: 100%;
+    height: 25px;
+    border-radius: 7px;
+}
+
+progress::-webkit-progress-bar {
+    background-color: #f1f2f2;
+}
+
+progress::-webkit-progress-value {
+    background-color: #009688;
+    border-radius:  0 10px 10px 0;
+}
+
+progress::-moz-progress-bar {
+    background-color: #f1f2f2;
+}
+
+progress::-moz-progress-value {
+    background-color: #009688;
+    border-radius:  0 10px 10px 0;
+}
+
+.container > div:last-child > div:last-child {
+    display: flex;
+    gap: 80px;
+}
+
+.container > div:last-child > div:last-child > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+}
+
+.container > div:last-child > div:last-child > div span:first-child {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.container > div:last-child > div:last-child > div span:last-child {
+    font-size: 25px;
+    color: #777;
+;
+}
