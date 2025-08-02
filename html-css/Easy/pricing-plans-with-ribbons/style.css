@@ -1,0 +1,132 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    min-height: 100vh;
+    background-color: #e0ebf2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+.plan {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 40px -30px #000;
+    width: 25%;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+
+.plan > div:first-child {
+    font-size: 50px;
+}
+
+.plan > div:nth-child(2) {
+    color: #fff;
+    font-size: 20px;
+    align-self: flex-start;
+    padding: 12px 50px;
+    border-radius: 0 20px 20px 0;
+    position: relative;
+}
+
+.plan > div:nth-child(2)::before,
+.plan > div:nth-child(2)::after {
+    content: "";
+    display: block;
+	height: 46px;
+    position: absolute;
+    left: -12px;
+    bottom: 0;
+}
+
+.plan > div:nth-child(2)::after {
+    width: 12px;
+}
+
+.plan > div:nth-child(2)::before {
+    border-top: 12px solid transparent;
+	border-right: 12px solid;
+}
+
+.plan > div:nth-child(3) {
+    color: #555;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.plan button {
+    color: #fff;
+    font-size: 18px;
+    padding: 14px 20px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+}
+
+.plan:first-child > div:nth-child(2) {
+    background-color: #13c8a6;
+}
+
+.plan:first-child > div:nth-child(2)::after {
+    background-color: #13c8a6;
+}
+
+.plan:first-child > div:nth-child(2)::before {
+	border-right-color: #0e927a;
+}
+
+.plan:first-child button {
+    background-color: #13c8a6;
+}
+
+.plan:nth-child(2) {
+    margin-top: 50px;
+}
+
+.plan:nth-child(2) > div:nth-child(2) {
+    background-color: #efcb53;
+}
+
+.plan:nth-child(2) > div:nth-child(2)::after {
+    background-color: #efcb53;
+}
+
+.plan:nth-child(2) > div:nth-child(2)::before {
+	border-right-color: #d8b542;
+}
+
+.plan:nth-child(2) button {
+    background-color: #efcb53;
+}
+
+.plan:last-child {
+    margin-top: 100px;
+}
+
+.plan:last-child > div:nth-child(2) {
+    background-color: #555fae;
+}
+
+.plan:last-child > div:nth-child(2)::after {
+    background-color: #555fae;
+}
+
+.plan:last-child > div:nth-child(2)::before {
+	border-right-color: #363f7c;
+}
+
+.plan:last-child button {
+    background-color: #555fae;
+}
