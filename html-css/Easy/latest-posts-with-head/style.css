@@ -1,0 +1,108 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.header div:first-child {
+    background-color: #ffab91;
+    width: 10vw;
+    height: 60px;
+}
+
+.header div:nth-child(2) {
+    background-color: #ff5722;
+    color: #fff;
+    padding: 0 20px;
+    height: 60px;
+    align-content: center;
+}
+
+.header div:nth-child(3) {
+    border: 2px solid #dfdfdf;
+    flex-grow: 1;
+}
+
+.header div:nth-child(4) {
+    background-color: #dfdfdf;
+    color: #666;
+    padding: 0 20px;
+    height: 45px;
+    align-content: center;
+}
+
+.header div:nth-child(5) {
+    background-color: #ff5722;
+    padding: 0 15px;
+    height: 45px;
+    align-content: center;
+}
+
+.header div:nth-child(6) {
+    border: 2px solid #dfdfdf;
+    width: 10vw;
+}
+
+.main {
+    width: 80vw;
+    margin-top: 30px;
+}
+
+.main > div {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.main > div > div:first-child {
+    background-color: #eee;
+    padding: 0 15px;
+    height: 150px;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.main > div > div:nth-child(3) {
+    background-color: #eee;
+    padding: 40px 20px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+    flex-grow: 1;
+}
+
+.main > div > div:nth-child(3) > div:first-child {
+    font-size: 25px;
+}
+
+.main > div > div:nth-child(3) > div:nth-child(2) {
+    color: #999;
+    font-size: 14px;
+    display: flex;
+    gap: 10px;
+}
+
+.main > div:nth-child(3) > div:nth-child(2) {
+    background-image: url("./image/keyboard.jpg");
+    background-size: cover;
+    width: 150px;
+    height: 150px;
+}
