@@ -1,0 +1,275 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    min-height: 100vh;
+    padding: 0 30px;
+}
+
+header ul {
+    list-style-type: none;
+    display: flex;
+    padding: 25px 5px;
+    margin: 0 0 25px;
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+main > div:first-child {
+    grid-column: 1/4;
+}
+
+.products {
+    grid-column: 1/4;
+}
+
+aside {
+    grid-column: 4/5;
+    grid-row: 1/5;
+}
+
+.products .head {
+    background-color: #f2f2f2;
+    height: 80px;
+    padding: 10px;
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.products .head > div {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.burger,
+.dots,
+select,
+img {
+    cursor: pointer;
+}
+
+.dots {
+    background-color: #c2c2c2;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    display: grid;
+    grid-template-columns: repeat(3, 5px);
+    place-content: center;
+    gap: 3px;
+}
+
+.dots span {
+    background-color: #fff;
+    height: 5px;
+}
+
+.burger {
+    background-color: #000;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    
+}
+
+.burger span {
+    background-color: #fff;
+    width: 50%;
+    height: 4px;
+}
+
+.products .head div:last-child > div {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.products .head div:last-child > div:first-child select {
+    height: 25px;
+}
+
+.products .head div:last-child > div:last-child select {
+    width: 150px;
+    height: 25px;
+}
+
+.products .head div:last-child select {
+    border: none;
+}
+
+.product-body {
+    display: flex;
+    gap: 25px;
+    margin-top: 25px;
+}
+
+.product-body > div:first-child {
+    position: relative;
+}
+
+.product-body > div:first-child::before {
+    content: "-12%";
+    background-color: #e52e06;
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    font-size: 14px;
+    border-radius: 50%;
+    position: absolute;
+    top: -15px;
+    right: -10px;
+    text-align: center;
+    align-content: center;
+}
+
+.product-body > div:last-child {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+
+.stars i {
+    color: #f3cd1e;
+    font-size: 12px;
+}
+
+.stars + div + div {
+    color: #868886;
+    font-size: 12px;
+}
+
+.stars + div + div + div {
+    display: flex;
+    gap: 15px;
+}
+
+.stars + div + div + div span:first-child {
+    color: #888888;
+    text-decoration: line-through;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.stars + div + div + div span:last-child {
+    color: #e72e06;
+    font-weight: bold;
+}
+
+.stars + div + div + div + div {
+    color: #888888;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.product-body > div:last-child > div:last-child {
+    display: flex;
+    gap: 5px;
+}
+
+.product-body > div:last-child > div:last-child i,
+.product-body > div:last-child > div:last-child svg {
+    font-size: 30px;
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    color: #888888;
+    box-shadow: 1px 2px 3px 0px #dadada;
+    align-content: center;
+    cursor: pointer;
+}
+
+aside .laptop {
+    margin-bottom: 25px;
+}
+
+aside .laptop,
+aside .color {
+    padding: 50px 25px;
+    box-shadow: 0px 0px 4px -1px #333;
+}
+
+aside .laptop > div:first-child,
+aside .color > div:first-child {
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+aside .laptop > div:nth-child(2),
+aside .color > div:nth-child(2) {
+    background-color: #e52e06;
+    width: 50px;
+    height: 2px;
+    margin-top: 15px;
+    margin-bottom: 50px;
+}
+
+aside .laptop > ul,
+aside .laptop > ul ul,
+aside .color > ul {
+    list-style-type: none;
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    color: #888888;
+}
+
+aside .laptop > ul ul {
+    padding-left: 15px;
+}
+
+aside .laptop > ul div {
+    margin-bottom: 15px;
+}
+
+aside .color li {
+    font-size: 14px;
+    display: flex;
+}
+
+aside .color li::before {
+    content: "";
+    display: block;
+    width: 15px;
+    height: 15px;
+    margin-right: 8px;
+    box-shadow: 5px 5px 10px -5px #000;
+}
+
+aside .color li:nth-child(1)::before {
+    background-color: #aab2bd;
+}
+
+aside .color li:nth-child(2)::before {
+    background-color: #fff;
+}
+
+aside .color li:nth-child(3)::before {
+    background-color: #000;
+
+}
+
+aside .color li:nth-child(4)::before {
+    background-color: #c19a6b;
+}
+
+aside .color li:nth-child(5)::before {
+    background-color: #f39c11;
+}
