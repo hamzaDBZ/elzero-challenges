@@ -1,0 +1,251 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 50px;
+    min-height: 100vh;
+}
+
+.container > div:first-child {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin-bottom: 30px;
+}
+
+.header {
+    font-size: 18px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header + div {
+    display: flex;
+    gap: 15px;
+}
+
+.header + div input:not(input:first-child) {
+    flex-grow: 1;
+}
+
+.header + div input {
+    background-color: #f0f1f3;
+    font-size: 18px;
+    height: 40px;
+    padding-left: 15px;
+    border: none;
+    border-radius: 3px;
+}
+
+.header + div input::placeholder {
+    font-style: italic;
+}
+
+.header + div button {
+    background-image: linear-gradient(90deg,#44379e 0%, #7623a0 100%);
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 0 25px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+table thead tr {
+    border-bottom: 2px solid #e4e4e4;
+    height: 50px;
+}
+
+th {
+    text-align: left;
+    position: relative;
+}
+
+th:nth-child(4)::before,
+th:nth-child(5)::before,
+th:nth-child(7)::before,
+th:nth-child(8)::before,
+th:nth-child(9)::before {
+    content: "";
+    width: 0px;
+    height: 0px;
+    border-top: 6px solid #000;
+    border-right: 5px solid transparent;
+    border-left: 5px solid transparent;
+    position: absolute;
+    top: calc(50% - 3px);
+}
+
+th:nth-child(4)::before {
+    left: 50px;
+}
+
+th:nth-child(5)::before {
+    left: 130px;
+}
+
+th:nth-child(7)::before {
+    left: 70px;
+}
+
+th:nth-child(8)::before {
+    left: 105px;
+}
+
+th:nth-child(9)::before {
+    left: 58px;
+}
+
+table tbody {
+    color: #757575;
+}
+
+table tbody tr:not(tr:last-child) {
+    height: 100px;
+    border-bottom: 2px solid #ececec;
+}
+
+table tbody tr:first-child td,
+table tbody tr:first-child td input {
+    font-weight: bold;
+}
+
+table tbody tr input[type="number"] {
+    height: 30px;
+    width: 40px;
+    border-radius: 5px;
+    border: 2px solid  #ccc;
+    text-align: center;
+}
+
+th:nth-child(1),
+td:nth-child(1) {
+    width: 50px;
+    text-align: center;
+}
+
+th:nth-child(2),
+th:nth-child(3) {
+    width: 80px;
+}
+
+th:nth-child(4),
+th:nth-child(5),
+th:nth-child(8) {
+    width: 180px;
+}
+
+th:nth-child(6),
+th:nth-child(7) {
+    width: 120px;
+}
+
+th:nth-child(9) {
+    width: 200px;
+}
+
+td:nth-child(10),
+.header > div:last-child {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+td:nth-child(10) {
+    height: 100px;
+}
+
+td:nth-child(10) span,
+.header > div:last-child span {
+    background-color: #848484;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+}
+
+td:nth-child(8) span {
+    display: inline-block;
+    background-color: #2ce5c0;
+    color: #fff;
+    padding: 10px;
+    width: 100px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+td:nth-child(8) span.pending {
+    background-color: #ffb74d;
+}
+
+table + div {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #757575;
+}
+
+table + div > div:last-child {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+table + div > div:last-child > div:nth-child(2) {
+    display: flex;
+    gap: 5px;
+}
+
+table + div > div:last-child > div:nth-child(2) span {
+    border: 1px solid #757575;
+    font-size: 20px;
+    height: 40px;
+    width: 40px;
+    align-content: center;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+table + div > div:last-child > div:nth-child(2) span:first-child,
+table + div > div:last-child > div:nth-child(2) span:hover {
+    background-color: #7623a0;
+    color: #fff;
+}
+
+input[type="checkbox"] {
+    appearance: none;
+    background-color: #fff;
+    margin: 0;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #757575;
+    border-radius: 4px;
+}
+
+input[type="checkbox"]::before {
+    content: "";
+    background-image: linear-gradient(90deg,#44379e 0%, #7623a0 100%);
+    display: block;
+    width: 20px;
+    height: 20px;
+    transform: scale(0);
+    transition: .1s transform ease-in-out;
+}
+
+input[type="checkbox"]:checked {
+    box-shadow: 0px 0px 20px -1px #7623a0;
+}
+
+input[type="checkbox"]:checked::before {
+    transform: scale(1);
+}
