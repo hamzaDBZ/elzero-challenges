@@ -1,0 +1,120 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    background-color: #20bfa9;
+    padding: 50px;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    gap: 200px;
+    position: relative;
+}
+
+.container::before,
+.container::after {
+    background-color: #fff;
+    position: absolute;
+}
+
+.container::before {
+    content: "";
+    width: 1px;
+    height: calc(100% - 100px);
+}
+
+.container::after {
+    content: "OR";
+    color: #20bfa9;
+    font-weight: bold;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    align-content: center;
+    text-align: center;
+    top: calc(50% - 25px);
+}
+
+.container > div {
+    background-image: linear-gradient(180deg, #282828 30%, #fff 30%);
+    height: 400px;
+    width: 400px;
+    padding: 25px 50px 50px;
+    text-align: center;
+    border-radius: 14px;
+}
+
+.container > div > div:first-child {
+    font-size: 30px;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 25px;
+}
+
+.container > div > div:first-child span {
+    color: #4caf50;
+}
+
+.container > div > div:last-child {
+    width: 300px;
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 14px;
+    box-shadow: 0px 0px 20px -10px #000;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.container > div > div:last-child > div:first-child {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.container > div > div:last-child ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.container > div > div:last-child ul {
+    position: relative;
+}
+
+.container > div > div:last-child ul li {
+    margin-left: 20px;
+}
+
+.container > div > div:last-child ul li::before {
+    content: "";
+    background-color: #f73859;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+    margin-top: 2px;
+}
+
+.container .button {
+    background-color: #f73859;
+    color: #fff;
+    border-radius: 8px;
+    padding: 10px 40px;
+    align-self: center;
+    cursor: pointer;
+}
