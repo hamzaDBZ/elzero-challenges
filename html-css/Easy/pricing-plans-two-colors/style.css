@@ -1,0 +1,153 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.container {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 20px;
+}
+
+.container > div:first-child {
+    background-color: #1998ff;
+    color: #fff;
+}
+
+.container > div:last-child {
+    color: #545454;
+    border: 1px solid #e0e0e0;
+}
+
+.container > div {
+    padding: 50px 50px 30px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    text-align: center;
+    position: relative;
+}
+
+.container > div:first-child .head {
+    background-color: #1998ff;
+}
+
+.container > div:last-child .head {
+    background-color: #545454;
+    color: #fff;
+}
+
+.container > div .head {
+    position: absolute;
+    top: -70px;
+    left: calc(150px - 150px / 2);
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+}
+
+.container > div .head::before {
+    content: "";
+    position: absolute;
+    border: 10px solid #fff;
+    width: 125px;
+    height: 125px;
+    border-radius: 50%;
+}
+
+.container > div:first-child .head::after {
+    content: "hot";
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    color: #1998ff;
+    border: 2px solid #1998ff;
+    border-radius: 50%;
+    font-size: 20px;
+    font-weight: bold;
+    align-content: center;
+    position: absolute;
+    top: -10px;
+    right: 0;
+}
+
+.container > div .head span:first-child {
+    font-size: 35px;
+}
+
+.container > div .head + div {
+    margin-top: 60px;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.container > div .head + div + div {
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.container > div .head + div + div div {
+    position: relative;
+}
+
+.container > div:first-child .head + div + div div::before,
+.container > div:first-child .head + div + div > div:first-child::after {
+    background-color: #178ded;
+}
+
+.container > div:last-child .head + div + div div::before,
+.container > div:last-child .head + div + div > div:first-child::after {
+    background-color: #ededed;
+}
+
+.container > div .head + div + div div::before,
+.container > div .head + div + div > div:first-child::after {
+    content: "";
+    height: 1px;
+    width: 300px;
+    position: absolute;
+    right: -50px;
+}
+
+.container > div .head + div + div div::before {
+    bottom: -12px;
+}
+
+.container > div .head + div + div div:first-child::after {
+    bottom: 31px;
+}
+
+.container > div:first-child .button {
+    background-color: #fff;
+    color: #1998ff;
+}
+
+.container > div:last-child .button {
+    background-color: #1998ff;
+    color: #fff;
+}
+
+.container .button {
+    font-size: 18px;
+    padding: 15px;
+    border-radius: 40px;
+    cursor: pointer;
+}
