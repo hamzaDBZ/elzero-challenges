@@ -1,0 +1,73 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    width: 80%;
+}
+
+.container > div:first-child {
+    background-color: #000;
+    height: 100px;
+    padding: 0 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container > div:first-child input,
+.container > div:first-child span,
+.container > div:first-child select {
+    height: 40px;
+    font-size: 16px;
+}
+
+.container > div:first-child select {
+    color: #999;
+    padding: 0 10px;
+}
+.container > div:first-child input {
+    padding-left: 10px;
+    width: 200px;
+}
+
+.container > div:first-child span {
+    display: inline-block;
+    background-color: #f7f7f7;
+    width: 40px;
+    text-align: center;
+    align-content: center;
+    margin-right: -6px;
+    border: 1px solid #767676;
+    font-size: 14px;
+}
+
+.container > div:first-child button {
+    background-color: #0eaaa6;
+    color: #fff;
+    border: none;
+    height: 40px;
+    padding: 0 15px;
+    cursor: pointer;
+}
+
+.container > div:last-child {
+    background-color: #0eaaa6;
+    color: #fff;
+    text-align: center;
+    padding: 30px 0;
+}
+
+.container > div:last-child div:first-child {
+    font-size: 25px;
+    margin-bottom: 20px;
+}
