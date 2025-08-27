@@ -44,7 +44,11 @@ body {
     background-color: #c0392b;
 }
 
-.flex div, .grid div {
+body > div {
+    width: 800px;
+}
+
+.flex div, .grid div, .float div {
     color: #fff;
     font-size: 18px;
     font-weight: bold;
@@ -52,9 +56,58 @@ body {
     text-align: center;
 }
 
+
+
+/* FLOAT STYLES */
+.float div {
+    height: 75px;
+    display: inline-block;
+}
+
+.float .one,
+.float .four,
+.float .eight{
+    height: 150px;
+}
+
+.float .one {
+    width: 30%;
+    float: left;
+}
+
+.float .two,
+.float .three {
+    width: 50%;
+    float: left;
+}
+
+.float .four {
+    width: 20%;
+}
+
+.float .five {
+    width: 42%;
+    float: left;
+}
+
+.float .six {
+    width: 18%;
+    float: left;
+}
+
+.float .seven {
+    width: 60%;
+    float: left;
+}
+
+.float .eight {
+    width: 40%;
+}
+
+
+
 /* FLEX STYLES */
 .flex {
-    width: 800px;
     display: flex;
     flex-wrap: wrap;
 }
@@ -103,9 +156,10 @@ body {
     width: 40%;
 }
 
+
+
 /* GRID STYLES */
 .grid {
-    width: 800px;
     display: grid;
     grid-template-columns: repeat(10, 1fr);
     grid-auto-rows: 75px;
