@@ -1,0 +1,35 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+div {
+    background-color: #787878;
+    width: 400px;
+    height: 400px;
+    border: 100px solid;
+    border-image-slice: 1;
+    border-image-source: conic-gradient(
+        #fff .5%,
+        #7cbb00 .5%,
+        #7cbb00 25%,
+        #fff 25%,
+        #fff 25.5%,
+        #ffbb00 25.5%,
+        #ffbb00 50%,
+        #fff 50%,
+        #fff 50.5%,
+        #00a1f1 50.5%,
+        #00a1f1 75%,
+        #fff 75%,
+        #fff 75.5%,
+        #f65314 75.5%
+    );
+}
