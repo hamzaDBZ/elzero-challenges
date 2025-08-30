@@ -1,0 +1,395 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding-top: 50px;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+main {
+    grid-column: 1/4;
+    padding-left: 100px;
+}
+
+main > div:first-child {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+main .post {
+    display: flex;
+    box-shadow: 5px 10px 15px -10px #b5b5b5;
+    cursor: pointer;
+}
+
+main .post img {
+    border-radius: 12px 0 0 12px;
+}
+
+main .post img + div {
+    background-color: #f9f9f9;
+    border-radius: 0 12px 12px 0;
+    height: 200px;
+    padding: 50px 50px 50px 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+}
+
+main .post img + div > div:first-child {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    font-style: italic;
+    color: #444;
+    letter-spacing: .5px;
+    text-transform: capitalize;
+}
+
+main .post img + div > div:nth-child(2),
+aside div:nth-child(3) > .line + div img + div > div:last-child {
+    height: 25px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #666;
+}
+
+main .post img + div > div:nth-child(2) > span:nth-child(2),
+aside div:nth-child(3) > .line + div img + div > div:last-child > span:nth-child(2) {
+    display: inline-block;
+    width: 2px;
+    height: 100%;
+    background-color: #b5b5b5;
+}
+
+main .post img + div > div:nth-child(2) i,
+aside div:nth-child(3) > .line + div img + div > div:last-child i {
+    color: #e8272e;
+}
+
+main .post img + div > div:nth-child(3) {
+    line-height: 1.5;
+    color: #999;
+}
+
+main .post img + div > div:nth-child(4) {
+    color: #e8272e;
+    font-size: 18px;
+}
+
+main > div:last-child {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+main > div:last-child span,
+main > div:last-child i {
+    font-size: 20px;
+    font-weight: bold;
+    color: #b5b5b5;
+    border: 2px solid #b5b5b5;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    align-content: center;
+    cursor: pointer;
+}
+
+main > div:last-child span:first-of-type {
+    background-color: #e8272e;
+    color: #fff;
+    border: 2px solid #e8272e;
+}
+
+aside {
+    padding-right: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+aside > div:first-child {
+    position: relative;
+}
+
+aside input {
+    border: 2px solid #b5b5b5;
+    height: 50px;
+    border-radius: 50px;
+    font-size: 18px;
+    padding: 20px 40px 20px 20px;
+}
+
+aside input + i {
+    color: #555;
+    height: 50px;
+    align-content: center;
+    position: absolute;
+    top: 0;
+    right: 15px;
+}
+
+aside > div:nth-child(1),
+aside > div:nth-child(2),
+aside > div:nth-child(3),
+aside > div:nth-child(5),
+aside > div:nth-child(6) {
+    width: 100%;
+}
+
+aside > div:nth-child(2),
+aside > div:nth-child(2) > ul,
+aside > div:nth-child(3),
+aside > div:nth-child(5),
+aside > div:nth-child(6) {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+aside > div:nth-child(2) > div:first-child,
+aside > div:nth-child(3) > div:first-child,
+aside > div:nth-child(5) > div:first-child,
+aside > div:nth-child(6) > div:first-child {
+    font-size: 20px;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.line {
+    background-color: #cacaca;
+    height: 2px;
+}
+
+aside > div:nth-child(2) > ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    color: #888;
+}
+
+aside > div:nth-child(2) li {
+    display: flex;
+    justify-content: space-between;
+}
+
+aside > div:nth-child(2) > ul i {
+    font-size: 18px;
+    margin-right: 5px;
+}
+
+aside > div:nth-child(3) > .line + div {
+    display: flex;
+    gap: 10px;
+}
+
+aside > div:nth-child(3) .line + div img,
+aside > div:nth-child(5) > div:last-child img {
+    border-radius: 8px;
+}
+
+aside > div:nth-child(3) .line + div img + div {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+aside > div:nth-child(3) .line + div img + div > div:first-child {
+    font-weight: bold;
+    font-style: italic;
+    letter-spacing: .2px;
+}
+
+aside > div:nth-child(3) .line + div img + div > div:last-child {
+    height: 18px;
+}
+
+aside > div:nth-child(4) {
+    position: relative;
+}
+
+aside > div:nth-child(4) img + div {
+    background-color: #2c2d39d9;
+    color: #fff;
+    padding: 40px 20px;
+    width: 275px;
+    height: 275px;
+    position: absolute;
+    top: 0;
+}
+
+aside > div:nth-child(4) img + div > div:first-child {
+    font-size: 32px;
+    font-style: italic;
+    font-weight: bold;
+    line-height: 1.2;
+    letter-spacing: 1px;
+}
+
+aside > div:nth-child(4) img + div > div:first-child span {
+    color: #e8272e;
+    font-size: 60px;
+}
+
+aside > div:nth-child(4) img + div > div:nth-child(2) {
+    font-size: 14px;
+}
+
+aside > div:nth-child(4) img + div > div:nth-child(3) {
+    background-color: #e8272e;
+    font-weight: bold;
+    border-radius: 30px;
+    width: max-content;
+    padding: 15px 30px;
+    margin-top: 18px;
+    cursor: pointer;
+}
+
+aside > div:nth-child(5) > div:last-child,
+aside > div:nth-child(6) > div:last-child {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 14px;
+}
+
+aside > div:nth-child(6) > div:last-child {
+    justify-content: flex-start;
+    column-gap: 6px;
+}
+
+aside > div:nth-child(6) > div:last-child > div {
+    background-color: #f4f4f4;
+    padding: 10px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+footer {
+    height: 200px;
+    grid-column: 1/5;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+footer > div {
+    height: 100px;
+}
+
+footer > div:first-child {
+    background-color: #e8272e;
+    color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    height: 120px;
+    width: 65%;
+    align-self: center;
+    position: absolute;
+    top: calc(50% - 60px);
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer div:first-child > div {
+    width: 40%;
+}
+
+footer div:first-child > div:first-child {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+footer div:first-child > div:first-child span:first-child {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    font-style: italic;
+    letter-spacing: .8px;
+}
+
+footer div:first-child > div:first-child span:last-child {
+    font-size: 14px;
+    line-height: 1.5;
+    letter-spacing: .2px;
+}
+
+footer div:first-child > div:last-child {
+    position: relative;
+}
+
+footer div:first-child > div:last-child input {
+    background-color: #ea3d43;
+    color: #fff;
+    border: 1px solid #ef6c72;
+    font-size: 16px;
+    padding: 20px;
+    padding-right: 120px;
+    width: 100%;
+    height: 50px;
+    border-radius: 30px;
+}
+
+footer div:first-child > div:last-child input::placeholder {
+    color: #fff;
+}
+
+footer div:first-child > div:last-child input:focus {
+    outline: 1px solid #fff;
+}
+
+footer div:first-child > div:last-child button {
+    background-color: #fff;
+    color: #e82e3e;
+    border: none;
+    border-radius: 30px;
+    padding: 10px 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: .2px;
+    position: absolute;
+    top: calc(50% - 35px / 2 - 1px);
+    right: 7px;
+    cursor: pointer;
+    box-shadow: 1px 2px #c9c9c9;
+}
+
+footer div:first-child > div:last-child button:active {
+    box-shadow: none;
+    top: calc(50% - 35px / 2 + 1px);
+    right: 5px;
+}
+
+footer > div:last-child {
+    background-image: url('./image/chicken-pasta.jpg');
+    background-size: cover;
+    position: relative;
+}
+
+footer > div:last-child::after {
+    content: "";
+    position: absolute;
+    background-color: #000;
+    opacity: .6;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
