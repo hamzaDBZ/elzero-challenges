@@ -46,6 +46,7 @@ body {
 
 .container > div > div:first-child {
     width: max-content;
+    height: 233.52px;
     position: relative;
     cursor: pointer;
 }
