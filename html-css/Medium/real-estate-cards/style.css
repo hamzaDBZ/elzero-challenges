@@ -1,0 +1,184 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #eee;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+    gap: 25px;
+    position: relative;
+}
+
+.container::before {
+    content: "Featured";
+    background-color: #ea723d;
+    color: #fff;
+    width: 65px;
+    height: 25px;
+    font-size: 14px;
+    text-align: right;
+    align-content: center;
+    position: absolute;
+    top: -12.5px;
+    z-index: 1;
+}
+
+.container::after {
+    content: "";
+    width: 0;
+    height: 0;
+    position: absolute;
+    border-left: 12px solid #ea723d;
+    border-top: 13px solid transparent;
+    border-bottom: 13px solid transparent;
+    left: 65px;
+    top: -13px;
+}
+
+.container > div > div:first-child {
+    width: max-content;
+    position: relative;
+    cursor: pointer;
+}
+
+.container .hot {
+    background-color: #dd3333;
+    color: #fff;
+    padding: 5px 8px;
+    position: absolute;
+    font-size: 14px;
+    bottom: 20px;
+    left: 15px;
+}
+
+.container .hot + span, 
+.container > div:last-child > div:first-child > span:last-child {
+    color: #fff;
+    position: absolute;
+    font-size: 20px;
+    bottom: 20px;
+    right: 20px;
+}
+
+.container > div > div:first-child + div {
+    background-color: #fff;
+    width: 350px;
+    padding: 25px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.container > div > div:first-child + div > div:first-child {
+    font-weight: bold;
+}
+
+.container > div > div:first-child + div > div:nth-child(2) {
+    color: #b3b3b3;
+    font-size: 13px;
+    line-height: 1.5;
+    letter-spacing: .2px;
+}
+
+.container > div > div:first-child + div > div:nth-child(3) {
+    font-size: 12px;
+    display: flex;
+    gap: 20px;
+}
+
+.container > div > div:first-child + div > div:nth-child(3) > div,
+.container > div > div:first-child + div > div:nth-child(4) {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.container > div > div:first-child + div > div:nth-child(3) > div > span:first-child {
+    font-weight: bold;
+}
+
+.container > div > div:first-child + div > div:nth-child(3) > div > span:last-child {
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.container > div > div:first-child + div > div:nth-child(3) > div > span:last-child i {
+    color: #b3b3b3;
+    font-size: 16px;
+}
+
+.container > div > div:first-child + div > div:nth-child(3) > div > span:last-child i + span {
+    font-weight: bold;
+}
+
+.square {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #b3b3b3;
+    box-shadow: 1px 1px inset #b3b3b3;
+}
+
+.container .square + span {
+    font-size: 12px;
+    display: flex;
+    gap: 8px;
+}
+
+.container .square + span > span:first-child {
+    font-weight: bold;
+}
+
+.container .square + span > span:last-child {
+    color: #b3b3b3;
+}
+
+.container > div > div:first-child + div > div:nth-child(4) {
+    gap: 5px;
+}
+
+.container > div > div:first-child + div > div:nth-child(4) > span:nth-child(1) {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.container > div > div:first-child + div > div:nth-child(4) > span:nth-child(2) {
+    font-size: 20px;
+    color: #1ea69a;
+}
+
+.overlay {
+    background-color: #1ea69a;
+    width: 100%;
+    height: 233.52px;
+    opacity: 0;
+    transition: opacity .5s;
+    position: absolute;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.overlay:hover {
+    opacity: .8;
+}
+
+.overlay div {
+    border: 2px solid #fff;
+    color: #fff;
+    padding: 15px 20px;
+    width: max-content;
+    
+}
